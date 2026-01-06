@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- CHANGE PER PAGE -->
+  <title>Page Title | Your Name Here</title>
+  <meta name="description" content="Short description of this page." />
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="../assets/css/style.css" />
+</head>
+
+<body>
+  <!-- =========================
+       Header (same as home)
+  ========================== -->
+  <header class="site-header">
+    <div class="container header-row">
+      <a class="brand" href="/">
+        <span class="brand-mark" aria-hidden="true">●</span>
+        <span class="brand-name">Your Name Here</span>
+      </a>
+
+      <nav class="nav" aria-label="Primary">
+        <a href="/services/">Services</a>
+        <a href="/book/">Book</a>
+        <a href="/about/">About</a>
+        <a href="/faq/">FAQ</a>
+      </nav>
+
+      <button class="nav-toggle" aria-label="Open menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- =========================
+       Page Header / Intro
+  ========================== -->
+  <main>
+    <section class="section">
+      <div class="container">
+        <div class="section-head">
+          <!-- CHANGE PER PAGE -->
+          <h1>Page Heading</h1>
+          <p>
+            Short intro sentence explaining what this page is about.
+          </p>
+        </div>
+
+        <!-- =========================
+             MAIN CONTENT AREA
+        ========================== -->
+
+        <div class="card">
+          <p>
+            This is your primary content area. Replace this with
+            page-specific content (services, about text, booking embed, etc).
+          </p>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- =========================
+       Footer (same as home)
+  ========================== -->
+  <footer class="site-footer">
+		<div class="container footer-row">
+			<p>© <span id="year"></span> Your Name Here</p>
+    	<div>
+    		<a class="link" href="/legal/disclaimer.html">Disclaimer</a>
+    	</div>
+  	</div>
+  </footer>
+
+  <!-- =========================
+       Small JS helpers
+  ========================== -->
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+
+    const toggle = document.querySelector(".nav-toggle");
+    const nav = document.querySelector(".nav");
+
+    if (toggle) {
+      toggle.addEventListener("click", () => {
+        const isOpen = nav.classList.toggle("open");
+        toggle.setAttribute("aria-expanded", String(isOpen));
+      });
+    }
+  </script>
+</body>
+</html>
+
+
